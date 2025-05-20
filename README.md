@@ -1,10 +1,10 @@
-# INA226 Node.js Library
+# INA226 Library
 
-A complete Node.js library for interfacing with the INA226 current/voltage monitoring sensor. This library provides a full-featured API for configuring the INA226 and reading voltage, current, and power measurements.
+A complete library for interfacing with the INA226 current/voltage monitoring sensor. This library provides a full-featured API for configuring the INA226 and reading voltage, current, and power measurements.
 
 ## Features
 
-- Complete implementation of INA226 functionality in Node.js
+- Complete implementation of INA226 functionality
 - Promises-based API for async operations
 - TypeScript definitions included
 - Comprehensive error handling
@@ -13,14 +13,12 @@ A complete Node.js library for interfacing with the INA226 current/voltage monit
 - Detailed documentation and examples
 
 ## Installation
-
-```bash
+```
 npm install ina226-node
 ```
 
 ## Basic Usage
-
-```javascript
+```
 const { INA226, OperatingMode } = require('ina226-node');
 
 // Create a new INA226 instance
@@ -81,17 +79,13 @@ Creates a new INA226 instance with the specified options:
 - `rShunt` - Shunt resistor value in ohms (default: 0.1)
 - `maxCurrent` - Maximum expected current in amps (default: 2.0)
 
-### Methods
-
 #### Basic Operations
-
 - `begin()` - Initialize the INA226 device
 - `close()` - Close the I2C connection
 - `isConnected()` - Check if the device is connected
 - `reset()` - Reset the device to default settings
 
 #### Configuration
-
 - `configure(options?)` - Configure the device with specified options:
   - `averages` - Number of samples to average
   - `busConvTime` - Bus voltage conversion time
@@ -101,20 +95,17 @@ Creates a new INA226 instance with the specified options:
 - `calibrateForMilliAmps(maxMilliAmps, rShuntOhms)` - Calibrate for milliamp-range sensing
 
 #### Power Management
-
 - `powerUp()` - Power up the device
 - `powerDown()` - Power down the device
 - `triggerAndWait(mode)` - Trigger a one-shot measurement and wait for completion
 
 #### Measurements
-
 - `readShuntVoltage()` - Read the shunt voltage in volts
 - `readBusVoltage()` - Read the bus voltage in volts
 - `readShuntCurrent()` - Read the current in amps
 - `readBusPower()` - Read the power in watts
 
 #### Information
-
 - `getMaxPossibleCurrent()` - Get the maximum possible current in amps
 - `getMaxCurrent()` - Get the maximum current in amps
 - `getMaxShuntVoltage()` - Get the maximum shunt voltage in volts
