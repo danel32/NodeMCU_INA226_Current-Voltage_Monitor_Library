@@ -12,11 +12,6 @@ A complete library for interfacing with the INA226 current/voltage monitoring se
 - Alert functionality with various threshold types
 - Detailed documentation and examples
 
-## Installation
-```
-npm install ina226-node
-```
-
 ## Basic Usage
 ```
 const { INA226, OperatingMode } = require('ina226-node');
